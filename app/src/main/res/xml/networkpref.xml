@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="category_network_options"
+        android:title="@string/setting_network_options">
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="subnet"
+            android:summary="@string/summary_subnet"
+            android:title="@string/setting_subnet" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:dependency="subnet"
+            android:key="tethering"
+            android:summary="@string/summary_tethering"
+            android:title="@string/setting_tethering" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:dependency="subnet"
+            android:key="lan"
+            android:summary="@string/summary_lan"
+            android:title="@string/setting_lan" />
+        <MultiSelectListPreference
+            android:defaultValue="@array/default_wifi_home"
+            android:key="wifi_homes"
+            android:summary="@string/summary_wifi_home" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="use_metered"
+            android:summary="@string/summary_metered"
+            android:title="@string/setting_metered" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="unmetered_2g"
+            android:summary="@string/summary_metered_2g"
+            android:title="@string/setting_metered_2g" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="unmetered_3g"
+            android:summary="@string/summary_metered_3g"
+            android:title="@string/setting_metered_3g" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="unmetered_4g"
+            android:summary="@string/summary_metered_4g"
+            android:title="@string/setting_metered_4g" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="national_roaming"
+            android:summary="@string/summary_national_roaming"
+            android:title="@string/setting_national_roaming" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="eu_roaming"
+            android:summary="@string/summary_eu_roaming"
+            android:title="@string/setting_eu_roaming" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="disable_on_call"
+            android:summary="@string/summary_call"
+            android:title="@string/setting_call" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="true"
+            android:key="lockdown_wifi"
+            android:title="@string/setting_lockdown_wifi" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="true"
+            android:key="lockdown_other"
+            android:title="@string/setting_lockdown_other" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="reload_onconnectivity"
+            android:title="@string/setting_reload_onconnectivity" />
+        <Preference
+            android:key="test"
+            android:title="" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

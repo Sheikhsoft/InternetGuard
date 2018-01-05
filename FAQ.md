@@ -1,4 +1,4 @@
-NetGuard
+InternetGuard
 ========
 
 Please scroll down if you want to ask a question, request a feature, or report a bug.
@@ -7,28 +7,28 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 <a name="FAQ0"></a>
-**(0) How do I use NetGuard?**
+**(0) How do I use InternetGuard?**
 
-* Enable the NetGuard firewall using the switch in NetGuard's action bar
-* Allow (greenish\*) or deny (reddish\*) Wi-Fi or mobile internet access using the icons next to an application name in NetGuard's applications list
+* Enable the InternetGuard firewall using the switch in InternetGuard's action bar
+* Allow (greenish\*) or deny (reddish\*) Wi-Fi or mobile internet access using the icons next to an application name in InternetGuard's applications list
 
-You can use *Settings > Defaults* to change from block/blacklist mode (disable *Block Wi-Fi* and *Block mobile*, and then block unwanted applications in NetGuard's applications list) to allow/whitelist mode (enable *Block Wi-Fi* and *Block mobile*, and then allow desired applications in NetGuard's applications list).
+You can use *Settings > Defaults* to change from block/blacklist mode (disable *Block Wi-Fi* and *Block mobile*, and then block unwanted applications in InternetGuard's applications list) to allow/whitelist mode (enable *Block Wi-Fi* and *Block mobile*, and then allow desired applications in InternetGuard's applications list).
 
 \* Depending on the theme you use, the icons may be:
 * Allowed (internet access permitted): greenish (teal) / blue / purple / gray
 * Blocked (internet access denied): reddish (salmon) / orange / yellow / amber
 
 <a name="FAQ1"></a>
-**(1) Can NetGuard completely protect my privacy?**
+**(1) Can InternetGuard completely protect my privacy?**
 
 No - nothing can completely protect your privacy.
-NetGuard will do its best, but it is limited by the fact it must use the VPN service.
+InternetGuard will do its best, but it is limited by the fact it must use the VPN service.
 This is the trade-off required to make a firewall which does not require root access.
 The firewall can only start when Android "allows" it to start,
 so it will not offer protection during early boot-up (although you can disable your network before rebooting).
 It will, however, be much better than nothing.
 
-Android N and later allows NetGuard to be an [Always-On VPN](https://developer.android.com/preview/features/afw.html#always-on-vpn).
+Android N and later allows InternetGuard to be an [Always-On VPN](https://developer.android.com/preview/features/afw.html#always-on-vpn).
 On Android O do not enable '*Block connections without VPN*', see [question 51](#FAQ51)) for more information on this.
 
 To protect yourself more, remember to disable Wi-Fi and mobile data before rebooting,
@@ -37,21 +37,21 @@ and only enable them on reboot, after the firewall service has started (and the 
 Thanks @[pulser](https://github.com/pulser/)
 
 <a name="FAQ2"></a>
-**(2)  Can I use another VPN application while using NetGuard**
+**(2)  Can I use another VPN application while using InternetGuard**
 
 If the VPN application is using the [VPN service](http://developer.android.com/reference/android/net/VpnService.html),
-then no, because NetGuard needs to use this service. Android allows only one application at a time to use this service.
+then no, because InternetGuard needs to use this service. Android allows only one application at a time to use this service.
 
-NetGuard is a firewall application, so there is no intention to add VPN support.
-However, NetGuard supports a [SOCKS5 proxy](https://en.wikipedia.org/wiki/SOCKS) to chain VPN applications.
+InternetGuard is a firewall application, so there is no intention to add VPN support.
+However, InternetGuard supports a [SOCKS5 proxy](https://en.wikipedia.org/wiki/SOCKS) to chain VPN applications.
 
 <a name="FAQ3"></a>
-**(3) Can I use NetGuard on any Android version?**
+**(3) Can I use InternetGuard on any Android version?**
 
 No, the minimum required Android version is 5.1 (<a href= "https://developer.android.com/about/versions/android-5.1.html">LOLLIPOP</a>)
 
 <a name="FAQ4"></a>
-**(4) Will NetGuard use extra battery power?**
+**(4) Will InternetGuard use extra battery power?**
 
 If you don't enable IP filtering or the network speed graph notification, probably not.
 
@@ -62,30 +62,30 @@ The network speed graph notification will use extra battery power.
 This is why the notification is shown only when the screen is on.
 You can decrease the update frequency using the settings to reduce the battery usage.
 
-Note that Android often (incorrectly) contribute battery usage of other applications to NetGuard,
-because the network traffic of other applications is flowing through NetGuard.
+Note that Android often (incorrectly) contribute battery usage of other applications to InternetGuard,
+because the network traffic of other applications is flowing through InternetGuard.
 
 <a name="FAQ6"></a>
-**(6) Will NetGuard send my internet traffic to an external (VPN) server?**
+**(6) Will InternetGuard send my internet traffic to an external (VPN) server?**
 
 No, depending on the mode of operation basically one of two things will happen with your internet traffic:
 
 * When IP filtering is disabled, blocked internet traffic will be routed into the local VPN service, which will operate as a sinkhole (in effect dropping all blocked traffic)
 * When IP filtering is enabled, both blocked and allowed internet traffic will be routed into the local VPN service and only allowed traffic will be forwarded to the intended destination (and not to a VPN server)
 
-The [Android VPN service](http://developer.android.com/reference/android/net/VpnService.html) is being used to locally route all internet traffic to NetGuard so no root is required to build this firewall application.
-NetGuard, unlike all other no-root firewalls applications, is 100% open source, so when you are in doubt you can check [the source code](https://github.com/M66B/NetGuard/) yourself.
+The [Android VPN service](http://developer.android.com/reference/android/net/VpnService.html) is being used to locally route all internet traffic to InternetGuard so no root is required to build this firewall application.
+InternetGuard, unlike all other no-root firewalls applications, is 100% open source, so when you are in doubt you can check [the source code](https://github.com/M66B/InternetGuard/) yourself.
 
 <a name="FAQ7"></a>
 **(7) Why are applications without internet permission shown?**
 
 Internet permission can be granted with each application update without user consent.
-By showing all applications, NetGuard allows you to control internet access even *before* such an update occurs.
+By showing all applications, InternetGuard allows you to control internet access even *before* such an update occurs.
 
 <a name="FAQ8"></a>
 **(8) What do I need to enable for the Google Play™ store app to work?**
 
-You need 3 packages (applications) enabled (use search in NetGuard to find them quickly):
+You need 3 packages (applications) enabled (use search in InternetGuard to find them quickly):
 
 * com.android.vending (Play store)
 * com.google.android.gms (Play services)
@@ -96,7 +96,7 @@ one can keep it in check by enabling "*Allow when device in use*" for all 3 of t
 Click on the down arrow on the left side of an application name and check that option,
 but leave the network icons set to red (hence blocked).  The little human icon will appear for those packages.
 
-Note that NetGuard does *not* require any Google service to be installed.
+Note that InternetGuard does *not* require any Google service to be installed.
 
 <a name="FAQ9"></a>
 **(9) Why is the VPN service being restarted?**
@@ -109,20 +109,20 @@ See [here](http://forum.xda-developers.com/showpost.php?p=65723629&postcount=178
 <a name="FAQ10"></a>
 **(10) Will you provide a Tasker plug-in?**
 
-No, because if Tasker is allowed to disable NetGuard, any application can disable NetGuard.
+No, because if Tasker is allowed to disable InternetGuard, any application can disable InternetGuard.
 Allowing a security application to be disabled by other applications is not a good idea.
 
 <a name="FAQ13"></a>
-**(13) How can I remove the ongoing NetGuard entry in the notification screen?**
+**(13) How can I remove the ongoing InternetGuard entry in the notification screen?**
 
-* Long click the NetGuard notification
+* Long click the InternetGuard notification
 * Tap the 'i' icon
 * Depending on your device and/or ROM manufacturer's software customizations, you can be directed to either:
   * the **App Info** screen and you can uncheck '*Show notifications*' and agree to the next dialog
   * the **App Notifications** screen and you can toggle the '*Block*' slider to on
 
 Note that, whether or not you get a dialog warning to agree upon,
-this operation will also disable any information or warning notifications from NetGuard,
+this operation will also disable any information or warning notifications from InternetGuard,
 such as the new application installed notification.
 
 To read about the need for the notification in the first place, see [question 24](#FAQ24).
@@ -140,8 +140,8 @@ To avoid this problem, at least temporarily, close all applications and/or servi
 <a name="FAQ15"></a>
 **(15) Why won't you support the F-Droid builds?**
 
-NetGuard contains ads since a while, because very few people support the NetGuard project in other ways.
-This means NetGuard will not be accepted by F-Droid.
+InternetGuard contains ads since a while, because very few people support the InternetGuard project in other ways.
+This means InternetGuard will not be accepted by F-Droid.
 
 Another reason is that F-Droid builds are more often than not outdated, leaving users with an old version with known bugs.
 
@@ -151,16 +151,16 @@ Another reason is that F-Droid builds are more often than not outdated, leaving 
 Disabled applications and applications without internet permission are shown dimmed.
 
 <a name="FAQ17"></a>
-**(17) Why is NetGuard using so much memory?**
+**(17) Why is InternetGuard using so much memory?**
 
-It isn't.  NetGuard doesn't allocate any memory, except a little for displaying the user interface elements and for buffering traffic.
+It isn't.  InternetGuard doesn't allocate any memory, except a little for displaying the user interface elements and for buffering traffic.
 It appears, on some Android variants, that the Google Play™ store app connection uses almost 150 MB.  It is needed for in-app donations,
-and is incorrectly attributed to NetGuard instead to the Google Play™ store app.
+and is incorrectly attributed to InternetGuard instead to the Google Play™ store app.
 
 <a name="FAQ18"></a>
-**(18) Why can't I find NetGuard in the Google Play™ store app?**
+**(18) Why can't I find InternetGuard in the Google Play™ store app?**
 
-NetGuard requires at least Android 5.1, so it is not available in the Google Play™ store app on devices running prior Android versions.
+InternetGuard requires at least Android 5.1, so it is not available in the Google Play™ store app on devices running prior Android versions.
 
 <a name="FAQ19"></a>
 **(19) Why does application XYZ still have internet access?**
@@ -177,33 +177,33 @@ This packet consists of less than 100 bytes and is counted by Android as outgoin
 and will be visible in the speed graph notification as well.
 
 <a name="FAQ20"></a>
-**(20) Can I Greenify/hibernate NetGuard?**
+**(20) Can I Greenify/hibernate InternetGuard?**
 
 No. [Greenifying](https://play.google.com/store/apps/details?id=com.oasisfeng.greenify)
-or otherwise hibernating NetGuard will result in rules not being applied
+or otherwise hibernating InternetGuard will result in rules not being applied
 when connectivity changes from Wi-Fi/mobile, screen on/off, and roaming/not roaming.
 
 <a name="FAQ21"></a>
-**(21) Does doze mode affect NetGuard?**
+**(21) Does doze mode affect InternetGuard?**
 
 I am not sure, because the [doze mode documentation](http://developer.android.com/training/monitoring-device-state/doze-standby.html)
 is not clear if the [Android VPN service](http://developer.android.com/reference/android/net/VpnService.html) will be affected.
 
-To be sure, you can disable battery optimizations for NetGuard manually like this:
+To be sure, you can disable battery optimizations for InternetGuard manually like this:
 
 ```
-Android settings > Battery > three dot menu > Battery optimizations > Dropdown > All apps > NetGuard > Don't optimize > Done
+Android settings > Battery > three dot menu > Battery optimizations > Dropdown > All apps > InternetGuard > Don't optimize > Done
 ```
 
 The procedure to accomplish this can vary between devices.
 
-Disabling doze mode for NetGuard cannot be done from within NetGuard
-because, according to Google, NetGuard is [not an application type allowed to do this](http://developer.android.com/training/monitoring-device-state/doze-standby.html#whitelisting-cases).
+Disabling doze mode for InternetGuard cannot be done from within InternetGuard
+because, according to Google, InternetGuard is [not an application type allowed to do this](http://developer.android.com/training/monitoring-device-state/doze-standby.html#whitelisting-cases).
 
 <a name="FAQ22"></a>
-**(22) Can I tether / use Wi-Fi calling while using NetGuard?**
+**(22) Can I tether / use Wi-Fi calling while using InternetGuard?**
 
-Yes, but this needs to be enabled in NetGuard's settings.
+Yes, but this needs to be enabled in InternetGuard's settings.
 Whether or not it works depends on your Android version
 because some Android versions have a bug preventing tethering and the VPN service working together.
 
@@ -222,7 +222,7 @@ However, the notification is being marked as low priority,
 which should result in moving it to the bottom of the list.
 
 The key icon and/or the VPN running notification,
-which is shown by Android and not by NetGuard, unfortunately, cannot be removed.
+which is shown by Android and not by InternetGuard, unfortunately, cannot be removed.
 The [Google documentation](http://developer.android.com/reference/android/net/VpnService.html) states:
 *"A system-managed notification is shown during the lifetime of a VPN connection"*.
 
@@ -294,31 +294,31 @@ If this is not the case, there will be an '!' in the Wi-Fi or mobile icon in the
 
 Recent Android versions seem not to switch connectivity from mobile to Wi-Fi when the Wi-Fi network is not really connected,
 even though there is a connection to the Wi-Fi network (or the other way around). On Android 6.0 and later you might get a notification asking you if you want to keep this connection on or not.
-To prevent a bad user experience, NetGuard includes a predefined rule to default allow the Google connectivity services.
+To prevent a bad user experience, InternetGuard includes a predefined rule to default allow the Google connectivity services.
 
-You can find all predefined rules [here](https://github.com/M66B/NetGuard/blob/master/app/src/main/res/xml/predefined.xml).
+You can find all predefined rules [here](https://github.com/M66B/InternetGuard/blob/master/app/src/main/res/xml/predefined.xml).
 
 You can override predefined rules.
 
 <a name="FAQ29"></a>
 **(29) Why do I get 'The item you requested is not available for purchase'?**
 
-You can only purchase pro features when you have installed NetGuard from the Google Play store.
+You can only purchase pro features when you have installed InternetGuard from the Google Play store.
 
 <a name="FAQ30"></a>
 **(30) Can I also run AFWall+ on the same device?**
 
-Unless you are just testing NetGuard, there is no current reason to use them both, since they cover the same function (firewall),
-although with different base needs (AFWall+ needs a rooted device) and ways of doing their thing (AFWall+ uses iptables whereas NetGuard uses a VPN).
+Unless you are just testing InternetGuard, there is no current reason to use them both, since they cover the same function (firewall),
+although with different base needs (AFWall+ needs a rooted device) and ways of doing their thing (AFWall+ uses iptables whereas InternetGuard uses a VPN).
 
-Also you need to keep per application access rules _always_ in sync between AFWall+ and NetGuard,
+Also you need to keep per application access rules _always_ in sync between AFWall+ and InternetGuard,
 else the application will not be able to access the network,
 hence bringing another level of complexity when setting and assuring everything work as expected.
 
-Some pointers on how to set up AFWall+ to be used simultaneously with NetGuard:
-* if not using filtering in NetGuard, applications _need_ direct internet access (Wi-Fi and/or mobile) in AFWall+
-* if using filtering, NetGuard will _need_ internet access (Wi-Fi and/or mobile) in AFWall+
-* if using filtering, when you un/reinstall NetGuard, remember to re-allow NetGuard in AFWall+
+Some pointers on how to set up AFWall+ to be used simultaneously with InternetGuard:
+* if not using filtering in InternetGuard, applications _need_ direct internet access (Wi-Fi and/or mobile) in AFWall+
+* if using filtering, InternetGuard will _need_ internet access (Wi-Fi and/or mobile) in AFWall+
+* if using filtering, when you un/reinstall InternetGuard, remember to re-allow InternetGuard in AFWall+
 * if using filtering, applications _need_ VPN internet access (check the box to show that option in AFWall+ settings)
 
 <a name="FAQ31"></a>
@@ -329,10 +329,10 @@ Especially system applications often have the same UID, despite having a differe
 These applications can only be allowed/blocked access to the internet as a group.
 
 <a name="FAQ32"></a>
-**(32) Why is the battery/network usage of NetGuard so high?**
+**(32) Why is the battery/network usage of InternetGuard so high?**
 
 This is because Android counts battery and network usage which is normally counted for other applications
-against NetGuard in IP filtering mode. The total battery usage is slightly higher when IP filtering mode is enabled.
+against InternetGuard in IP filtering mode. The total battery usage is slightly higher when IP filtering mode is enabled.
 IP filtering mode is always enabled on Android versions prior to 5.0, and optionally enabled on later Android versions.
 
 <a name="FAQ33"></a>
@@ -358,12 +358,12 @@ You can use the condition '*when screen is on*' instead.
 <a name="FAQ35"></a>
 **(35) Why does the VPN not start?**
 
-NetGuard "asks" Android to start the local VPN service,
+InternetGuard "asks" Android to start the local VPN service,
 but some Android versions contain a bug which prevents the VPN from starting (automatically).
-Sometimes this is caused by updating NetGuard.
-Unfortunately this cannot be fixed by NetGuard.
-You can try to restart your device and/or revoke the VPN permissions from NetGuard using the Android settings.
-Sometimes it helps to uninstall and install NetGuard again (be sure to export your settings first!).
+Sometimes this is caused by updating InternetGuard.
+Unfortunately this cannot be fixed by InternetGuard.
+You can try to restart your device and/or revoke the VPN permissions from InternetGuard using the Android settings.
+Sometimes it helps to uninstall and install InternetGuard again (be sure to export your settings first!).
 
 <a name="FAQ36"></a>
 **(36) Can you add PIN or password protection?**
@@ -382,22 +382,22 @@ The right question is "*why are there so many taxes and fees*":
 
 So, what is left for the developer is just a fraction of what you pay.
 
-Despite NetGuard being *really* a lot of work, only some of the convenience and advanced features need to be purchased,
-which means that NetGuard is basically free to use
+Despite InternetGuard being *really* a lot of work, only some of the convenience and advanced features need to be purchased,
+which means that InternetGuard is basically free to use
 and that you don't need to pay anything to reduce your data usage, increase battery life, and increase your privacy.
 
-Also note that most free applications will appear not to be sustainable in the end, whereas NetGuard is properly maintained and supported,
+Also note that most free applications will appear not to be sustainable in the end, whereas InternetGuard is properly maintained and supported,
 and that free applications may have a catch, like sending privacy sensitive information to the internet.
 
 See [here](http://forum.xda-developers.com/showpost.php?p=67892427&postcount=3030) for some more information.
 
 <a name="FAQ38"></a>
-**(38) Why did NetGuard stop running?**
+**(38) Why did InternetGuard stop running?**
 
-On most devices, NetGuard will keep running in the background with its foreground service.
-On some devices (in particular some Samsung models), where there are lots of applications competing for memory, Android may still stop NetGuard as a last resort.
-Unfortunately this cannot be fixed by NetGuard, and can be considered a shortcoming of the device and/or as a bug in Android.
-You can workaround this problem by enabling the watchdog in the NetGuard advanced options to check every 10-15 minutes.
+On most devices, InternetGuard will keep running in the background with its foreground service.
+On some devices (in particular some Samsung models), where there are lots of applications competing for memory, Android may still stop InternetGuard as a last resort.
+Unfortunately this cannot be fixed by InternetGuard, and can be considered a shortcoming of the device and/or as a bug in Android.
+You can workaround this problem by enabling the watchdog in the InternetGuard advanced options to check every 10-15 minutes.
 
 <a name="FAQ39"></a>
 **(39) How does a VPN based firewall differ from a iptables based firewall?**
@@ -443,7 +443,7 @@ Some links:
 **(44) I don't get notifications on access**
 
 To prevent a high number of status bar notifications, notify on access is done only once per domain name per application.
-Access to domain names shown in the application access log (drill down in the NetGuard application settings) will not be notified again,
+Access to domain names shown in the application access log (drill down in the InternetGuard application settings) will not be notified again,
 even if you just enabled notify on access.
 To get notified for all domain names again, you can clear the application access log using the trashcan icon.
 If you want to clear all applications logs, you can export and import your settings.
@@ -451,7 +451,7 @@ If you want to clear all applications logs, you can export and import your setti
 Another reason why you don't get notifications could be an applied "Power Saving Mode" for example on Samsung devices. Even if you do not restrict CPU frequency in this mode.
 
 <a name="FAQ45"></a>
-**(45) Does NetGuard handle incoming connections?**
+**(45) Does InternetGuard handle incoming connections?**
 
 The Android VPN service handles outgoing connections only (from applications to the internet), so incoming connections are normally left alone.
 
@@ -473,7 +473,7 @@ and I expect that you take responsibility for informing yourself of what you are
 <a name="FAQ47"></a>
 **(47) Why are there in-application advertisements?**
 
-Developing NetGuard was quite a challenge and [really a lot of work](https://www.openhub.net/p/netguard/estimated_cost), but fun to do.
+Developing InternetGuard was quite a challenge and [really a lot of work](https://www.openhub.net/p/netguard/estimated_cost), but fun to do.
 A good product deserves good support, which means, in practice, that I am spending 30-60 minutes each and every day answering questions and solving problems.
 Just about 1 in 1000 downloaders purchase any of the pro features, so support is basically one way.
 This is not maintainable in the long run and this is why advertisements were added.
@@ -482,45 +482,45 @@ Purchasing any of the pro features will completely disable advertisements and he
 <a name="FAQ48"></a>
 **(48) Why are some domain names blocked while they are set to be allowed?**
 
-NetGuard blocks traffic based on the IP addresses an application is trying to connect to.
+InternetGuard blocks traffic based on the IP addresses an application is trying to connect to.
 If more than one domain name is on the same IP, they cannot be distinguished.
 If you set different rules for 2 domains which resolve to the same IP, both will be blocked.
 
 Thanks @[pulser](https://github.com/pulser/)
 
 Another potential problem is that Android doesn't honor the DNS TTL value and applies its own caching rules.
-This could result in NetGuard too early or too late purging a DNS record from its own cache,
+This could result in InternetGuard too early or too late purging a DNS record from its own cache,
 resulting in not recognizing an IP address or recognizing a wrong IP address.
-You can try to workaround this by changing the DNS TTL value setting of NetGuard.
+You can try to workaround this by changing the DNS TTL value setting of InternetGuard.
 This value is used as a minimum DNS TTL value in an attempt to mimick the behavior of Android.
 
 <a name="FAQ49"></a>
-**(49) Does NetGuard encrypt my internet traffic / hide my IP address?**
+**(49) Does InternetGuard encrypt my internet traffic / hide my IP address?**
 
-NetGuard is a firewall application that filters internet traffic on your device (see also [this question](#FAQ6)),
+InternetGuard is a firewall application that filters internet traffic on your device (see also [this question](#FAQ6)),
 so it is not meant to - and does not - encrypt your internet traffic or hide your IP address.
 
 <a name="FAQ50"></a>
-**(50) Will NetGuard automatically start on boot?**
+**(50) Will InternetGuard automatically start on boot?**
 
-Yes, NetGuard will automatically be started on boot if you powered off your device with NetGuard enabled and NetGuard is not installed on external storage.
+Yes, InternetGuard will automatically be started on boot if you powered off your device with InternetGuard enabled and InternetGuard is not installed on external storage.
 
 Some devices, for example OnePlus and Mi devices, can prevent certain apps from auto-starting after reboot.
 This can be disabled in the Android settings.
 
 <a name="FAQ51"></a>
-**(51) Why does NetGuard block all internet traffic?!**
+**(51) Why does InternetGuard block all internet traffic?!**
 
-Make sure you have put NetGuard on the doze exception list (Android 6 Marshmallow or later)
-and that Android allows NetGuard to use the internet in the background (see also [this question](#FAQ21)).
+Make sure you have put InternetGuard on the doze exception list (Android 6 Marshmallow or later)
+and that Android allows InternetGuard to use the internet in the background (see also [this question](#FAQ21)).
 
-Make sure you are not running NetGuard in allow (whitelist) mode (check the NetGuard default settings).
+Make sure you are not running InternetGuard in allow (whitelist) mode (check the InternetGuard default settings).
 
 Make sure you didn't enable the Always-On VPN setting '*Block connections without VPN*' (Android 8 Oreo or later).
 This will block resolving domain names too (is it a bug or feature?).
 
 Some Android versions contain a bug resulting in all internet traffic being blocked.
-Mostly, you can workaround this bug by enabling filtering in NetGuard's *Advanced options*.
+Mostly, you can workaround this bug by enabling filtering in InternetGuard's *Advanced options*.
 
 <a name="FAQ52"></a>
 **(52) What is lockdown mode?**
@@ -543,14 +543,14 @@ If your language is missing, please contact me to have it added.
 <a name="FAQ54"></a>
 **(54) How to tunnel all TCP connections through the Tor network?**
 
-Tor with NetGuard is only supported in the [XDA NetGuard forum](http://forum.xda-developers.com/showthread.php?t=3233012).
-There is no personal support on Tor with NetGuard, because I don't use Tor myself.
+Tor with InternetGuard is only supported in the [XDA InternetGuard forum](http://forum.xda-developers.com/showthread.php?t=3233012).
+There is no personal support on Tor with InternetGuard, because I don't use Tor myself.
 
 First, install [Orbot](market://details?id=org.torproject.android), the Android client for Tor,
 run it, press _Start_, while it connects open its _Settings_ and make sure it's setup to auto-start
 on device start.
 
-In NetGuard's _Network options_ enable _Subnet routing_ and in _Advanced options_ toggle on
+In InternetGuard's _Network options_ enable _Subnet routing_ and in _Advanced options_ toggle on
 _Use SOCKS5 proxy_ with address 127.0.0.1 and port as 9050 (this is the default port, if you changed
 this in Orbot make the adjustment here also).
 
@@ -567,28 +567,28 @@ online services (eg. Gmail, Google Play store) failing to login or being forced 
 when accessing sites that use Cloudflare's CDN services.
 
 <a name="FAQ55"></a>
-**(55) Why does NetGuard connect to Amazon / ipinfo.io / 216.239.34.21?**
+**(55) Why does InternetGuard connect to Amazon / ipinfo.io / 216.239.34.21?**
 
-NetGuard connects to Amazon / [ipinfo.io](https://ipinfo.io/) to show the names and organizations for IP addresses.
+InternetGuard connects to Amazon / [ipinfo.io](https://ipinfo.io/) to show the names and organizations for IP addresses.
 If you don't want this, just disable showing names and organizations using the three dot menu in the global log view.
 
 <a name="FAQ56"></a>
-**(56) Why does NetGuard allow all internet traffic?!**
+**(56) Why does InternetGuard allow all internet traffic?!**
 
-NetGuard can block each and every application, even system applications and components.
+InternetGuard can block each and every application, even system applications and components.
 
-NetGuard, by default, allows all traffic to prevent hard to find problems.  You need to selectively block traffic yourself by tapping on the mobile or Wi-Fi icons.
+InternetGuard, by default, allows all traffic to prevent hard to find problems.  You need to selectively block traffic yourself by tapping on the mobile or Wi-Fi icons.
 
-Be aware that NetGuard will allow traffic to an application when the screen is on and the condition *'when screen on'* is enabled.
+Be aware that InternetGuard will allow traffic to an application when the screen is on and the condition *'when screen on'* is enabled.
 
 <a name="FAQ57"></a>
-**(57) Why does NetGuard use so much data?**
+**(57) Why does InternetGuard use so much data?**
 
-Basically, NetGuard doesn't use data itself.
-However, many Android versions incorrectly account data of other applications flowing through NetGuard to NetGuard instead of to the applications.
-The data usage of other applications will be zero with NetGuard enabled in this case.
+Basically, InternetGuard doesn't use data itself.
+However, many Android versions incorrectly account data of other applications flowing through InternetGuard to InternetGuard instead of to the applications.
+The data usage of other applications will be zero with InternetGuard enabled in this case.
 
-The total data usage of your device will be the same with and without NetGuard.
+The total data usage of your device will be the same with and without InternetGuard.
 
 <a name="FAQ58"></a>
 **(58) Why does loading the application list take a long time?**
@@ -608,27 +608,27 @@ So, the only thing I can do, is give some advice:
 * Make sure you didn't block Google Play store / Play services
 * Make sure you are logged in with the right Google account and that there is nothing wrong with your Google account
 * Open the Play store application and wait at least a minute to give it time to synchronize with the Google servers
-* Open NetGuard and navigate to the pro features screen; NetGuard will check the purchases again
+* Open InternetGuard and navigate to the pro features screen; InternetGuard will check the purchases again
 
 Note that:
 
 * Purchases are stored in the Google cloud and cannot get lost
 * There is no time limit on purchases, so they cannot expire
 * Google does not expose details (name, e-mail, etc) about buyers to developers
-* An application like NetGuard cannot select which Google account to use
+* An application like InternetGuard cannot select which Google account to use
 
 If you cannot solve the problem with the purchase, you will have to contact Google about it.
 
 <a name="FAQ60"></a>
 **(60) Why does IP (Wi-Fi) calling/SMS/MMS not work?**
 
-Please see the [compatibility section](https://github.com/M66B/NetGuard/#compatibility) about this
+Please see the [compatibility section](https://github.com/M66B/InternetGuard/#compatibility) about this
 (you might need to request the desktop version to see this section if you are using a mobile device).
 
 <a name="FAQ61"></a>
-**(61) Help, NetGuard crashed!**
+**(61) Help, InternetGuard crashed!**
 
-NetGuard rarely crashes ("unexpectedly stopped"), but if it crashed (which is something different than being stopped by Android, see [this FAQ](#FAQ38)),
+InternetGuard rarely crashes ("unexpectedly stopped"), but if it crashed (which is something different than being stopped by Android, see [this FAQ](#FAQ38)),
 then it is mostly caused by bugs in your Android version
 (either in the [Android VPN service](https://developer.android.com/reference/android/net/VpnService.html) implementation or in the [Android Linux kernel](https://developer.android.com/guide/platform/index.html#linux-kernel)).
 I am happy to check what the cause of a crash is and I will fix it whenever possible, but I need a logcat captured from your PC with the crash log for this.
@@ -637,6 +637,6 @@ If you don't know how to capture a logcat from your PC, please use your favorite
 
 <br />
 
-**NetGuard is supported for phones and tablets only, so not for other device types like televisions or vehicles.**
+**InternetGuard is supported for phones and tablets only, so not for other device types like televisions or vehicles.**
 
 **If you didn't find the answer to your question, you can ask your questions [in this forum](http://forum.xda-developers.com/showthread.php?t=3233012) or contact me by using [this contact form](https://contact.faircode.eu/)**.

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +12,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context=".ActivityMain">
 
     <LinearLayout
@@ -51,7 +54,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:text="@android:string/ok"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
         <android.support.v4.widget.SwipeRefreshLayout
@@ -92,7 +96,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:text="@android:string/ok"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,7 +124,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:text="@android:string/ok"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,7 +152,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:text="@android:string/ok"
-                android:textAppearance="@style/TextSmall" />
+                android:textAppearance="@style/TextSmall"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
         <RelativeLayout
@@ -175,13 +182,16 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
                     android:layout_marginStart="4dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_security_color_24dp" />
+                        android:src="@drawable/ic_security_color_24dp"
+                        android:contentDescription=""
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/tvAd"
@@ -191,16 +201,19 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginStart="4dp"
                         android:textAppearance="@style/TextSmall"
-                        android:textColor="?attr/colorOff" />
+                        android:textColor="?attr/colorOff"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
+
+
 
                 <com.google.android.gms.ads.AdView
                     android:id="@+id/adView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    ads:adSize="SMART_BANNER"
-                    ads:adUnitId="@string/ad_banner_unit_id" />
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id" />
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -211,5 +224,131 @@
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        tools:ignore="RtlHardcoded" />
+
+    <View
+        android:id="@+id/reveal"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sheet"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reveal">
+
+        <View
+            android:id="@+id/sheetTop"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/sheetDark"
+            android:transformPivotY="64dp"
+            android:visibility="invisible" />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scrollbars="none"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/main_tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tabMode="scrollable"
+                    app:tabGravity="fill"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/list"
+        android:layout_alignParentBottom="true"
+        android:layout_height="350dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_tab_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/bottom_list_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:background="@drawable/bottom_sheet" />
+
+    <LinearLayout
+        android:id="@+id/bottom_list"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="DisableBaselineAlignment">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/cancel"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:text="Rate Us"
+                android:textColor="@android:color/background_light"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/apply_filters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="acceptFilters"
+                android:padding="12dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/filter"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="animate"
+        android:src="@drawable/settings"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        tools:ignore="RelativeOverlap" />
 </RelativeLayout>
+    </layout>

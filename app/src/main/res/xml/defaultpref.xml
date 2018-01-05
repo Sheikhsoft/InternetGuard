@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <PreferenceCategory
+            android:key="category_defaults"
+            android:title="@string/setting_defaults">
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="false"
+                android:key="block_porn"
+                android:title="@string/setting_block_porn" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="true"
+                android:key="whitelist_wifi"
+                android:title="@string/setting_whitelist_wifi" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="true"
+                android:key="whitelist_other"
+                android:title="@string/setting_whitelist_other" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="true"
+                android:key="screen_on"
+                android:title="@string/setting_screen_on" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="false"
+                android:dependency="screen_on"
+                android:key="screen_wifi"
+                android:title="@string/setting_screen_wifi" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="false"
+                android:dependency="screen_on"
+                android:key="screen_other"
+                android:title="@string/setting_screen_other" />
+            <eu.sheikhsoft.internetguard.SwitchPreference
+                android:defaultValue="false"
+                android:key="whitelist_roaming"
+                android:title="@string/setting_whitelist_roaming" />
+            <Preference
+                android:key="test"
+                android:title="" />
+        </PreferenceCategory>
+    </PreferenceScreen>

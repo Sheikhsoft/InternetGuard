@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <PreferenceCategory
+            android:key="category_options"
+            android:title="@string/setting_options">
+            <ListPreference
+                android:defaultValue="teal"
+                android:title="Change Theme"
+                android:entries="@array/themeNames"
+                android:entryValues="@array/themeValues"
+                android:key="theme" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="dark_theme"
+                android:title="@string/setting_dark" />
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="install"
+                android:summary="@string/summary_install"
+                android:title="@string/setting_install" />
+            <EditTextPreference
+                android:defaultValue="0"
+                android:inputType="number"
+                android:key="auto_enable"
+                android:summary="@string/summary_auto" />
+            <EditTextPreference
+                android:defaultValue="0"
+                android:inputType="number"
+                android:key="screen_delay"
+                android:summary="@string/summary_delay" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="update_check"
+                android:summary="@string/summary_update"
+                android:title="@string/setting_update" />
+            <Preference
+                android:key="test"
+                android:title="" />
+        </PreferenceCategory>
+
+
+</PreferenceScreen>

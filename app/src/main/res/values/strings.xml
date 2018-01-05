@@ -1,15 +1,14 @@
 <resources>
-    <string name="app_name" translatable="false">NetGuard</string>
-    <string name="app_description">NetGuard provides simple and advanced ways to block access to the internet - no root required. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection.</string>
-    <string name="app_copyright">Copyright \u00A9 2015–2017 by M. Bokhorst (M66B)</string>
-    <string name="app_android">NetGuard requires Android 5.1 or later</string>
-    <string name="app_xposed">Xposed causes too many crashes, which might result in NetGuard being removed from the Google Play Store, therefore NetGuard isn\'t supported while Xposed is installed</string>
-    <string name="app_license">By using NetGuard, you agree to the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License version 3</a></string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Privacy policy</a></string>
-    <string name="app_first">Great care has been taken to develop and test NetGuard,
-however it is impossible to guarantee NetGuard will work correctly on every device.
-\n\nBy using NetGuard, you agree to the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License version 3</a></string>
-    <string name="app_admob">NetGuard uses Google\'s AdMob advertising service. AdMob\'s privacy policy is available <a href="https://www.google.com/intl/en/policies/privacy/">here</a>.</string>
+    <string name="app_name" translatable="false">InternetGuard</string>
+    <string name="app_description">InternetGuard provides simple and advanced ways to block access to the internet - no root required. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection.</string>
+    <string name="app_copyright">Copyright © 2017 by SK SHAMIMUL ISLAM(SHEIKHSOFT)</string>
+    <string name="app_android">InternetGuard requires Android 5.1 or later</string>
+    <string name="app_xposed">Xposed causes too many crashes, InternetGuard isn\'t supported while Xposed is installed</string>
+    <string name="app_license">By using InternetGuard, you agree to the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License version 3</a></string>
+    <string name="app_privacy"><a href="http://internetguard.sheikhsoft.com/privacy.php">Privacy policy</a></string>
+    <string name="app_first">Welcome To InternetGuard.
+\n\nBy using InternetGuard, you agree to the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License version 3</a></string>
+    <string name="app_admob">InternetGuard uses Google\'s AdMob advertising service. AdMob\'s privacy policy is available <a href="https://www.google.com/intl/en/policies/privacy/">here</a>.</string>
     <string name="app_agree">I agree</string>
     <string name="app_disagree">I disagree</string>
 
@@ -61,6 +60,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="title_external">For an external server select \'nobody\'</string>
 
     <string name="setting_defaults">Defaults (white/blacklist)</string>
+    <string name="setting_block_porn">Block Adult Websites</string>
     <string name="setting_whitelist_wifi">Block Wi-Fi</string>
     <string name="setting_whitelist_other">Block mobile</string>
     <string name="setting_screen_wifi">Allow Wi-Fi when screen on</string>
@@ -138,14 +138,14 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="setting_technical_subscription">Subscriptions</string>
 
     <string name="summary_install">Show status bar notification to directly configure newly installed apps (pro feature)</string>
-    <string name="summary_auto">After disabling using the widget, automatically enable NetGuard again after the selected number of minutes (enter zero to disable this option)</string>
+    <string name="summary_auto">After disabling using the widget, automatically enable InternetGuard again after the selected number of minutes (enter zero to disable this option)</string>
     <string name="summary_delay">After turning the screen off, keep screen on rules active for the selected number of minutes (enter zero to disable this option)</string>
     <string name="summary_update">Check for new releases on GitHub twice daily</string>
 
     <string name="summary_tethering">Depending on the Android version, tethering may work or may not work. Tethered traffic cannot be filtered.</string>
     <string name="summary_subnet">Enable subnet routing; might enable Wi-Fi calling, but might also trigger bugs in Android and increase battery usage</string>
     <string name="summary_lan">Allow apps to connect to local area network addresses, like 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16</string>
-    <string name="summary_ip6">Route IP version 6 traffic to NetGuard so it can selectively be allowed or blocked</string>
+    <string name="summary_ip6">Route IP version 6 traffic to InternetGuard so it can selectively be allowed or blocked</string>
     <string name="summary_wifi_home">Apply Wi-Fi network rules for selected network only (apply mobile network rules for other Wi-Fi networks)</string>
     <string name="summary_metered">Apply mobile network rules to metered (paid, tethered) Wi-Fi networks</string>
     <string name="summary_metered_2g">Apply Wi-Fi network rules for 2G data connections</string>
@@ -153,7 +153,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="summary_metered_4g">Apply Wi-Fi network rules for LTE data connections</string>
     <string name="summary_national_roaming">Do not apply roaming rules when the SIM and mobile network country are the same</string>
     <string name="summary_eu_roaming">Do not apply roaming rules when the SIM and mobile network country are within the EU (roam like at home)</string>
-    <string name="summary_call">Disable NetGuard on incoming or outgoing telephone call. This can be used to work around IP/Wi-Fi calling problems.</string>
+    <string name="summary_call">Disable InternetGuard on incoming or outgoing telephone call. This can be used to work around IP/Wi-Fi calling problems.</string>
 
     <string name="summary_system">Define rules for system apps (for experts)</string>
     <string name="summary_log_app">Log attempts to access the internet for apps. This might result in extra battery usage.</string>
@@ -163,7 +163,7 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="summary_block_domains">Respond with the configured DNS response code for blocked domain names. This switch is disabled when no hosts file is available.</string>
     <string name="summary_rcode">The default value is 3 (NXDOMAIN), which means \'non-existent domain\'.</string>
     <string name="summary_socks5_enabled">Only TCP traffic will be sent to the proxy server</string>
-    <string name="summary_watchdog">Periodically check if NetGuard is still running (enter zero to disable this option). This might result in extra battery usage.</string>
+    <string name="summary_watchdog">Periodically check if InternetGuard is still running (enter zero to disable this option). This might result in extra battery usage.</string>
 
     <string name="summary_stats">Show network speed graph in status bar notification</string>
 
@@ -174,20 +174,20 @@ however it is impossible to guarantee NetGuard will work correctly on every devi
     <string name="msg_packages">%1$d allowed, %2$d blocked</string>
     <string name="msg_hosts">%1$d allowed, %2$d blocked, %3$d hosts</string>
     <string name="msg_waiting">Waiting for event</string>
-    <string name="msg_disabled">NetGuard is disabled, use the switch above to enable NetGuard</string>
-    <string name="msg_revoked">NetGuard has been disabled, likely by using another VPN based app</string>
+    <string name="msg_disabled">InternetGuard is disabled, use the switch above to enable InternetGuard</string>
+    <string name="msg_revoked">InternetGuard has been disabled, likely by using another VPN based app</string>
     <string name="msg_installed">\'%1$s\' installed</string>
     <string name="msg_installed_n">Has been installed</string>
     <string name="msg_access">%1$s attempted internet access</string>
     <string name="msg_access_n">Attempted internet access</string>
     <string name="msg_completed">Action completed</string>
-    <string name="msg_vpn">NetGuard uses a local VPN to filter internet traffic.
+    <string name="msg_vpn">InternetGuard uses a local VPN to filter internet traffic.
 For this reason, please allow a VPN connection in the next dialog.
 Your internet traffic is not being sent to a remote VPN server.</string>
-    <string name="msg_autostart">NetGuard could not start automatically. This is likely because of a bug in your Android version.</string>
+    <string name="msg_autostart">InternetGuard could not start automatically. This is likely because of a bug in your Android version.</string>
     <string name="msg_error">An unexpected error has occurred: \'%s\'</string>
     <string name="msg_start_failed">Android refused to start the VPN service at this moment. This is likely because of a bug in your Android version.</string>
-    <string name="msg_try">Try NetGuard</string>
+    <string name="msg_try">Try InternetGuard</string>
     <string name="msg_terms">By donating you agree to the <a href="http://www.netguard.me/#terms">terms &amp; conditions</a></string>
     <string name="msg_dimming">If you cannot press OK in the next dialog, another (screen dimming) app is likely manipulating the screen.</string>
     <string name="msg_mbday">&#177; %1$.3f&#9650; %2$.3f&#9660; MB/day</string>
@@ -197,11 +197,11 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="msg_mb">%1$7.3f&#9650; %2$7.3f&#9660; MB</string>
     <string name="msg_gb">%1$7.3f&#9650; %2$7.3f&#9660; GB</string>
     <string name="msg_count">%dx</string>
-    <string name="msg_doze">For consistent results, the Android battery optimizations should be disabled for NetGuard.
-\n\nIn the next dialog, select \"All apps\" at the top, tap on NetGuard in the list and select and confirm \"Don\'t optimize\".</string>
-    <string name="msg_datasaving">For consistent results, the Android data saving options should be disabled for NetGuard
+    <string name="msg_doze">For consistent results, the Android battery optimizations should be disabled for InternetGuard.
+\n\nIn the next dialog, select \"All apps\" at the top, tap on InternetGuard in the list and select and confirm \"Don\'t optimize\".</string>
+    <string name="msg_datasaving">For consistent results, the Android data saving options should be disabled for InternetGuard
 \n\nIn the next dialog, enable the options \"Background data\" and \"Unrestricted data usage\"</string>
-    <string name="msg_filter">Using filtering will cause Android to attribute data and power usage to NetGuard - Android assumes the data and power are being used by NetGuard, rather than the original apps</string>
+    <string name="msg_filter">Using filtering will cause Android to attribute data and power usage to InternetGuard - Android assumes the data and power are being used by InternetGuard, rather than the original apps</string>
     <string name="msg_filter4">Android 4 requires filtering to be enabled</string>
     <string name="msg_log_disabled">Traffic logging is disabled, use the switch above to enable logging. Traffic logging might result in extra battery usage.</string>
     <string name="msg_clear_rules">This will reset the rules and conditions to their default values</string>
@@ -214,7 +214,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="msg_stop_forward">Stop forwarding of %1$s port %2$d?</string>
     <string name="msg_metered">Network is metered</string>
     <string name="msg_inactive">No active internet connection</string>
-    <string name="msg_queue">NetGuard is busy</string>
+    <string name="msg_queue">InternetGuard is busy</string>
     <string name="msg_update">Update available, tap to download</string>
     <string name="msg_usage">You can allow (greenish) or deny (reddish) Wi-Fi or mobile internet access by tapping on the icons next to an app</string>
     <string name="msg_whitelist">Internet access is allowed by default (blacklist mode), this can be changed in the settings</string>
@@ -222,7 +222,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="msg_system">Managing all (system) apps can be enabled in the settings</string>
     <string name="msg_issue">Please describe the problem and indicate the time of the problem:</string>
     <string name="msg_vpn_cancelled">VPN connection cancelled\nDid you configure another VPN to be an always-on VPN?</string>
-    <string name="msg_on">Powering down your device with NetGuard enabled, will automatically start NetGuard on powering up your device</string>
+    <string name="msg_on">Powering down your device with InternetGuard enabled, will automatically start InternetGuard on powering up your device</string>
     <string name="msg_unavailable">This feature is not available on this Android version</string>
     <string name="msg_always_on">Another VPN is set as Always-on VPN</string>
 
@@ -265,7 +265,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="title_enable_help1">Filtering is also required to allow or block individual addresses</string>
     <string name="title_enable_help2">Enabling logging (less) or filtering (more) might increase battery usage and might affect network speed</string>
 
-    <string name="title_rate">Rate</string>
+    <string name="title_rate">Rate US</string>
     <string name="title_allow">Allow</string>
     <string name="title_block">Block</string>
     <string name="title_allow_wifi">Allow Wi-Fi</string>
@@ -299,7 +299,7 @@ Your internet traffic is not being sent to a remote VPN server.</string>
     <string name="title_pro_reponse">Response</string>
 
     <string-array name="themeNames">
-        <item>teal/orange</item>
+        <item>Default</item>
         <item>blue/orange</item>
         <item>purple/red</item>
         <item>amber/blue</item>
@@ -342,8 +342,12 @@ Your internet traffic is not being sent to a remote VPN server.</string>
         <item>6</item>
     </string-array>
 
-    <string name="ad_app_id" translatable="false">ca-app-pub-6350249268625326~6636046697</string>
-    <string name="ad_banner_unit_id" translatable="false">ca-app-pub-6350249268625326/8112779894</string>
+    <string name="ad_app_id" translatable="false">ca-app-pub-5245039317944205~8750067306</string>
+    <string name="ad_banner_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="ad_test_device_id" translatable="false">552541D5D2716FC6104E56803A84F806</string>
     <string name="fingerprint" translatable="false">ef46f813d2c8a064d72c936b9b96d1cccc989378</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="sample_interval">Sample Interval</string>
+    <string name="number_of_sample">Number of Sample</string>
+
 </resources>

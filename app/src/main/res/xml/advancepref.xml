@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="category_advanced_options"
+        android:title="@string/setting_advanced_options">
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="manage_system"
+            android:summary="@string/summary_system"
+            android:title="@string/setting_system" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="log_app"
+            android:summary="@string/summary_log_app"
+            android:title="@string/setting_log_app" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:dependency="log_app"
+            android:key="notify_access"
+            android:summary="@string/summary_access"
+            android:title="@string/setting_access" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:key="filter"
+            android:summary="@string/summary_filter"
+            android:title="@string/setting_filter" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:dependency="filter"
+            android:key="clear_onreload"
+            android:title="@string/setting_clear_onreload" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="false"
+            android:dependency="filter"
+            android:key="track_usage"
+            android:summary="@string/summary_track_usage"
+            android:title="@string/setting_track_usage" />
+        <Preference
+            android:key="reset_usage"
+            android:title="@string/setting_reset_usage" />
+        <eu.sheikhsoft.internetguard.SwitchPreference
+            android:defaultValue="true"
+            android:dependency="filter"
+            android:key="use_hosts"
+            android:summary="@string/summary_block_domains"
+            android:title="@string/setting_block_domains" />
+        <EditTextPreference
+            android:dependency="filter"
+            android:inputType="number"
+            android:key="rcode"
+            android:summary="@string/summary_rcode" />
+        <Preference
+            android:key="test"
+            android:title="" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
