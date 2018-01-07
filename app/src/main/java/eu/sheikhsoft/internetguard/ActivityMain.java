@@ -1008,7 +1008,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
     private void initAds() {
         MobileAds.initialize(this,
-                "ca-app-pub-5245039317944205~8750067306");
+                "#");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("33BE2250B43518CCDA7DE426D04EE231")
